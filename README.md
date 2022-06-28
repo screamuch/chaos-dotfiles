@@ -7,7 +7,7 @@ Do what you gotta do - this is an arch-based config
 ## Install base system software right away
 
 - `# pacman -S yay`
-- `# pacman -S qtile alacritty copyq dunst fish gtop htop micro neofetch nitrogen picom pulsemixer libqalculate qutebrowser rofi rofi-emoji filelight xterm thunar`
+- `# pacman -S qtile alacritty copyq dmenu dunst fish gtop htop libinput micro neofetch nitrogen picom pulsemixer libqalculate qutebrowser rofi rofi-emoji filelight xterm thunar`
 - `$ yay -S ly pfetch ttf-apple-emoji noto-fonts-emoji-apple otf-code-new-roman`
 
 ## Unpack configs and set up X
@@ -23,7 +23,7 @@ Do what you gotta do - this is an arch-based config
 
 ### First priority
 
-- `$ yay -S zoom slack spotify telegram-desktop steam fiji-bin typora audacity`
+- `$ yay -S zoom slack spotify telegram-desktop steam fiji-bin typora audacity natural-scrolling-forever`
 - `$ yay -S ungoogled-chromium`
 - `https://docs.conda.io/en/latest/miniconda.html`
 - In `nvim` run `:PlugInstall`
