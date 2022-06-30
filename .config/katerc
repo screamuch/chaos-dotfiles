@@ -139,8 +139,8 @@ RunPrefix=
 SetEditor=false
 
 [MainWindow]
-HDMI-A-0 DisplayPort-2 Height 1920x1080=1045
-HDMI-A-0 DisplayPort-2 Width 1920x1080=1760
+HDMI-A-0 DisplayPort-2 Height 1920x1080=480
+HDMI-A-0 DisplayPort-2 Width 1920x1080=640
 HDMI-A-0 Height 1920x1080=1027
 HDMI-A-0 Width 1920x1080=794
 

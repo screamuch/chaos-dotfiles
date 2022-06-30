@@ -129,6 +129,11 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(),
         desc="Spawn a command using a prompt widget"),
+
+    # Screenshots
+    Key([], "Print", lazy.spawn('spectacle -mc'), desc="Screenshot current monitor"),
+    Key([mod, "shift"], "Print", lazy.spawn('spectacle -rc'), desc="Screenshot a region"),
+    Key([mod], "Print", lazy.spawn('spectacle -ac'), desc="Screenshot active window"),
 ]
 
 # groups
@@ -247,9 +252,7 @@ mouse = [
          start=lazy.window.get_position()),
     Drag([mod], "Button3", lazy.window.set_size_floating(),
          start=lazy.window.get_size()),
-    Click([], "Button2", lazy.window.bring_to_front()),
-    Drag([], "Button2", lazy.window.set_position_floating(),
-         start=lazy.window.get_position()),
+    Click([mod], "Button1", lazy.window.bring_to_front()),
 ]
 
 @hook.subscribe.startup_once

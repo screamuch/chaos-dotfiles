@@ -3,7 +3,7 @@
 ## Install base system
 
 - Do what you gotta do - this is an arch-based config
-- Make swap and fat32 efi boot partitions
+- Make swap, fat32 efi boot partitions
 - `# pacstrap MOUNT_POINT base linux linux-firmware`
 - Sync the clock to hardware
 - Install `sudo`, `nano`, `efibootmgr`, `efibootmgr`, `dosfstools`, `mtools`, `grub`
@@ -18,16 +18,18 @@
 
 - `# pacman -S networkmanager git yay`
 - `# pacman -S qtile alacritty copyq dmenu dunst fish gtop htop libinput micro neofetch nitrogen picom pulsemixer libqalculate qutebrowser rofi rofi-emoji filelight xterm thunar`
-- `$ yay -S ly pfetch ttf-apple-emoji noto-fonts-emoji-apple otf-code-new-roman`
+- `$ yay -S ly pfetch ttf-apple-emoji noto-fonts-emoji-apple otf-code-new-roman github-cli`
 - `$ systemctl enable NetworkManager`
 
 ## Unpack configs and set up X
 
-1. `etc` contents (!) go in `/etc/`
-2. `wallpapers` go in `$HOME/Pictures`
-3. `.config`, `.screenlayout`, all other files (except `README.md` and `.git`) go in `$HOME`
-4. Set up ly: `# systemctl enable ly.service`
-5. `$ chsh --shell /bin/fish $USER`
+1. `$ gh auth login`
+2. `$ git clone https://github.com/screamuch/chaos-dotfiles`
+3. `etc` contents (!) go in `/etc/`
+4. `wallpapers` go in `$HOME/Pictures`
+5. `.config`, `.screenlayout`, all other files (except `README.md` and `.git`) go in `$HOME`
+6. Set up ly: `# systemctl enable ly.service`
+7. `$ chsh --shell /bin/fish $USER`
 
 ## Install application software
 
@@ -40,6 +42,7 @@
 
 ### Not that necessary, KDE things I liked
 
+`# pacman -S spectacle` (this one is kind of a must)
 `# pacman -S kdeconnect`
 `# pacman -S kate`
 `# pacman -S konsole`
