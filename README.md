@@ -16,10 +16,11 @@
 
 ## Install base system software right away
 
-- `# pacman -S networkmanager git yay`
-- `# pacman -S qtile alacritty copyq dmenu dunst fish gtop htop libinput micro neofetch nitrogen picom pulsemixer libqalculate qutebrowser rofi rofi-emoji filelight xterm thunar`
-- `$ yay -S ly pfetch ttf-apple-emoji noto-fonts-emoji-apple otf-code-new-roman github-cli`
-- `$ systemctl enable NetworkManager`
+- enable `multilib` repo
+- `# pacman -Syyu git`
+- install yay (`makepkg -si`)
+- `# pacman -S qtile alacritty copyq dmenu dunst fish gtop htop libinput micro neofetch nitrogen picom pulsemixer libqalculate qutebrowser rofi rofi-emoji filelight xterm thunar spectacle thunderbird`
+- `$ yay -S ly pfetch ttf-apple-emoji noto-fonts-emoji-apple otf-code-new-roman ttf-hack apple-fonts github-cli rofi-calc`
 
 ## Unpack configs and set up X
 
@@ -35,14 +36,14 @@
 
 ### First priority
 
-- `$ yay -S zoom slack spotify telegram-desktop steam fiji-bin typora audacity natural-scrolling-forever`
+- `$ yay -S zoom slack-desktop spotify telegram-desktop steam fiji-bin typora audacity natural-scrolling-forever`
 - `$ yay -S ungoogled-chromium`
 - `https://docs.conda.io/en/latest/miniconda.html`
+- Install vimplug for neovim
 - In `nvim` run `:PlugInstall`
 
 ### Not that necessary, KDE things I liked
 
-`# pacman -S spectacle` (this one is kind of a must)
 `# pacman -S kdeconnect`
 `# pacman -S kate`
 `# pacman -S konsole`
