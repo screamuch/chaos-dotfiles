@@ -89,7 +89,11 @@ cp ${HOME}/.config/qtile/autostart.sh ${BASEDIR}/.config/qtile/autostart.sh
 cp -r ${HOME}/.config/qutebrowser/ ${BASEDIR}/.config/
 
 # rofi
-cp -r ${HOME}/.config/rofi/config.rasi ${BASEDIR}/.config/config.rasi
+DIRECTORY=${BASEDIR}/.config/rofi/
+if [ ! -d "$DIRECTORY" ]; then
+  mkdir ${DIRECTORY}
+fi
+cp -r ${HOME}/.config/rofi/config.rasi ${BASEDIR}/.config/rofi/config.rasi
 
 # filelight
 cp ${HOME}/.config/filelightrc ${BASEDIR}/.config/filelightrc
