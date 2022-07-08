@@ -1,0 +1,2 @@
+[General]
+commands="@ByteArray({\"_0121f245_50d4_446d_ae60_23d6c73c3542_\":{\"command\":\"loginctl lock-session\",\"name\":\"Lock Screen\"},\"_2f2c3f6b_61e7_4816_81c9_1f561b825870_\":{\"command\":\"systemctl reboot\",\"name\":\"Reboot\"},\"_3304e1c8_4b78_4ba2_a15d_473930e82bf9_\":{\"command\":\"systemctl suspend\",\"name\":\"Suspend\"},\"_bd725c76_6272_4e36_9ff2_2d80677347d5_\":{\"command\":\"loginctl unlock-session\",\"name\":\"Unlock Screen\"},\"_e0b79865_1fc1_48ba_a9bf_11cbf71dc5bb_\":{\"command\":\"qutebrowser youtube.com\",\"name\":\"Load YouTube\"}})"

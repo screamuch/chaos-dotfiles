@@ -140,14 +140,14 @@ keys = [
 def init_group_names():
     return [
         ('web', {'layout': 'monadtall'}),
-        ('irc', {'layout': 'floating'}),
-        ('doc', {'layout': 'zoomy'}),
-        ('sci', {'layout': 'zoomy'}),
+        ('irc', {'layout': 'monadthreecol'}),
+        ('mail', {'layout': 'monadtall'}),
+        ('doc', {'layout': 'monadtall'}),
         ('dev', {'layout': 'verticaltile'}),
         ('sys', {'layout': 'verticaltile'}),
         ('mus', {'layout': 'monadtall'}),
-        ('nl1', {'layout': 'zoomy'}),
-        ('nl2', {'layout': 'zoomy'})
+        ('nl1', {'layout': 'monadtall'}),
+        ('nl2', {'layout': 'monadtall'})
     ]
 
 def init_groups(group_names):
@@ -173,18 +173,18 @@ layout_theme = {"border_width": 3,
 layouts = [
     layout.MonadTall(**layout_theme),
     layout.VerticalTile(**layout_theme),
-    layout.Zoomy(**layout_theme),
-    layout.Floating(**layout_theme)
+    layout.MonadThreeCol(**layout_theme),
 ]
 
 widget_defaults = dict(
+    # font='Code New Roman',
     font='Code New Roman',
     fontsize=17,
     padding=3,
     background=background_color,
     foreground=text_color
 )
-extension_defaults = widget_defaults.copy()
+# extension_defaults = widget_defaults.copy()
 
 screens = [
     # horizontal screen (right side)
@@ -196,19 +196,19 @@ screens = [
                     active="000000"
                 ),
                 widget.Sep(padding=8),
-                widget.WindowName(font='Hack', fontsize=14),
+                widget.WindowName(font='SF Pro', fontsize=17),
                 widget.Chord(
                     chords_colors={
                         'launch': ("#ff0000", "#ffffff"),
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.CurrentLayout(font='Hack', fontsize=14),
+                widget.CurrentLayout(font='SF Pro', fontsize=17),
                 widget.Sep(padding=8),
                 widget.Systray(),
                 # make this display something on mouse hover
                 widget.PulseVolume(emoji=True, volume_app="pulsemixer"),
-                widget.Clock(font='San Francisco', fontsize=18, padding=10,
+                widget.Clock(font='SF Pro', fontsize=18, padding=10,
                              format='%m/%d/%Y %a %I:%M:%S %p'
                 ),
             ],
@@ -225,17 +225,17 @@ screens = [
                     active="000000"
                 ),
                 widget.Sep(padding=8),
-                widget.WindowName(font='Hack', fontsize=14),
-                widget.CurrentLayout(font='Hack', fontsize=14),
+                widget.WindowName(font='SF Pro', fontsize=17),
+                widget.CurrentLayout(font='SF Pro', fontsize=17),
                 widget.Sep(padding=8),
                 widget.CPU(
-                    font='Hack', fontsize=14,
+                    font='SF Pro', fontsize=17,
                     format="cpu: {load_percent}%",
                     mouse_callbacks = {'Button1': lazy.spawn(terminal + ' -e gtop')},
                 ),
                 widget.Sep(padding=8),
                 widget.Memory(
-                    font='Hack', fontsize=14,
+                    font='SF Pro', fontsize=17,
                     format="ram: {MemUsed:.0f}{mm} ",
                     mouse_callbacks = {'Button1': lazy.spawn(terminal + ' -e htop')},
                 ),
@@ -282,10 +282,10 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class='toolbar'),
     Match(title='branchdialog'),  # gitk
     Match(title='pinentry'),  # GPG key password entry
-    Match(title='Telegram'),
-    Match(title='Discord'),
-    Match(title='Zoom'),
-    Match(title='Slack'),
+    # Match(title='Telegram'),
+    # Match(title='Discord'),
+    # Match(title='Zoom'),
+    # Match(title='Slack'),
     Match(wm_class='copyq'),
 ])
 auto_fullscreen = True

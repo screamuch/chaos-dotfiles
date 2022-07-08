@@ -1,10 +1,13 @@
 #!/bin/sh
 
+# defaults
+$TERM=alacritty
+
 # set monitor arrangement
 $HOME/.screenlayout/default.sh
 
 # enable Russian keyboard
-setxkbmap -model logicordless -layout "us,ru" -variant ",mac" -option "grp:alt_space_toggle" &
+setxkbmap -model Apple -layout "us,ru" -variant ",mac" -option "grp:alt_space_toggle" &
 
 # launch compositor
 compton --config ./.config/picom/picom.conf &

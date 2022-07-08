@@ -8,13 +8,28 @@ config_version: 2
 settings:
   content.geolocation:
     https://www.ubereats.com: false
+  content.media.audio_capture:
+    https://meet.google.com: true
+  content.media.audio_video_capture:
+    https://meet.google.com: true
+  content.media.video_capture:
+    https://meet.google.com: true
   content.notifications.enabled:
+    https://meet.google.com: true
     https://www.facebook.com: false
+    https://www.forbes.com: false
     https://www.reddit.com: false
   content.register_protocol_handler:
+    https://calendar.google.com?cid=%25s: false
     https://mail.google.com?extsrc=mailto&url=%25s: false
     https://outlook.office.com?mailtouri=%25s: false
     https://outlook.office365.com?mailtouri=%25s: false
+  fonts.default_family:
+    global: Code New Roman
+  fonts.default_size:
+    global: 15px
+  fonts.prompts:
+    global: 12 Code New Roman
   url.start_pages:
     global: ~/home.html
   window.transparent:

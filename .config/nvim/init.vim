@@ -18,9 +18,6 @@ set tabstop=2
 " << and >> keybindings
 set shiftwidth=2
 
-" set system clipboard as default
-set clipboard+=unnamedplus
-
 " Window Navigation with Ctrl-[hjkl]
 noremap <C-J> <C-W>j
 noremap <C-K> <C-W>k
@@ -62,6 +59,9 @@ call plug#begin()
 
   " github colors
   Plug 'cormacrelf/vim-colors-github'
+
+  " system clipboard
+  Plug 'matveyt/neoclip'
 
   " Initialize plugin system
 call plug#end()
