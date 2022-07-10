@@ -22,10 +22,13 @@ dunst &
 nitrogen --restore &
 
 # enable natural scrolling
-natural-scrolling
+natural-scrolling &
 
 # start regular shit
-telegram-desktop &
-discord &
-slack &
+telegram-desktop -startintray & 
+discord --start-minimized &
+slack -u &
+
+# faster qutebrowser
+qutebrowser --nowindow &
 

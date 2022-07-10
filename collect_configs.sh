@@ -44,11 +44,13 @@ if [ ! -d "$DIRECTORY" ]; then
 fi
 cp ${HOME}/.config/htop/htoprc ${BASEDIR}/.config/htop/htoprc
 
-# kdeconnect
-cp -r ${HOME}/.config/kdeconnect/ ${BASEDIR}/.config/
-
 # micro
-cp -r ${HOME}/.config/micro ${BASEDIR}/.config/
+DIRECTORY=${BASEDIR}/.config/micro/
+if [ ! -d "$DIRECTORY" ]; then
+  mkdir ${DIRECTORY}
+fi
+cp ${HOME}/.config/micro/settings.json ${BASEDIR}/.config/micro/settings.json
+cp ${HOME}/.config/micro/bindings.json ${BASEDIR}/.config/micro/bindings.json
 
 # neofetch
 cp -r ${HOME}/.config/neofetch ${BASEDIR}/.config/
