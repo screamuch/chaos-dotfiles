@@ -6,6 +6,8 @@
 
 config_version: 2
 settings:
+  content.desktop_capture:
+    https://meet.google.com: true
   content.geolocation:
     https://www.ubereats.com: false
   content.media.audio_capture:
@@ -15,6 +17,7 @@ settings:
   content.media.video_capture:
     https://meet.google.com: true
   content.notifications.enabled:
+    https://colab.research.google.com: false
     https://meet.google.com: true
     https://www.facebook.com: false
     https://www.forbes.com: false
